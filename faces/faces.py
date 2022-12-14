@@ -1,2 +1,8 @@
-give_input = input("Type your message: ").replace(":)", "🙂").replace(":(", "🙁")
-print(give_input)
+def main():
+    message = convert(input("Type your message: "))
+    
+def convert(message):
+    replace_emoticon = message.replace(":)", "🙂").replace(":(", "🙁")
+    print(replace_emoticon)
+
+main()
