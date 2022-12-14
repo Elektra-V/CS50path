@@ -5,14 +5,16 @@ def main():
     print(f"Leave ${tip:.2f}")
 
 
-def dollars_to_float(d):
-    amount_of_meal = float(d.removeprefix('$'))
-    return amount_of_meal
+def dollars_to_float(dollars):
+    meal_cost = float(dollars.removeprefix('$'))
+    return meal_cost
 
 
-def percent_to_float(p):
-    percent_value = p.removesuffix('%')
-    percent = float(percent_value)/100
-    return percent
+def percent_to_float(percent):
+    percent_value = percent.removesuffix('%')
+    percentage = float(percent_value) / 100
+    return percentage
+
 
 main()
+

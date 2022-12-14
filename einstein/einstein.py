@@ -1,3 +1,6 @@
 mass = int(input("Mass: "))
-E = int(mass * (300000000)**2)
-print(f"The equivalent energy is {E} joules.")
+
+light_speed = 300000000
+energy = mass * light_speed**2
+print(f"The equivalent energy is {energy} joules.")
+
