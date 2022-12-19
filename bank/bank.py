@@ -3,8 +3,6 @@ def main():
     print(check_hello(greet))
 
 
-
-
 def check_hello(greeting):
     if greeting.find("hello") == 0:
         return "$0"

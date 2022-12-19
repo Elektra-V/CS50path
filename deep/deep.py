@@ -6,8 +6,6 @@ def main():
         print("No")
 
 
-
-
 def check(user_answer):
     if user_answer.strip() == "42" or user_answer.lower().strip() == "forty-two" or user_answer.lower().strip() == "forty two":
         return True

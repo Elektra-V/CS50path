@@ -3,8 +3,6 @@ def main():
     tell_extension(file_name)
 
 
-
-
 def tell_extension(file):
         if file[1] == "gif":
             print("image/gif")
@@ -23,7 +21,5 @@ def tell_extension(file):
         else:
             print("application/octet-stream")
     
-
-
 
 main()
