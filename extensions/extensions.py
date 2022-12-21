@@ -1,25 +1,26 @@
 def main():
-    file_name = input("File name: ").split(".")
-    tell_extension(file_name)
+    extension = input("File name: ").split(".")[-1]
+    print(tell_extension(extension))
 
 
-def tell_extension(file):
-        if file[1] == "gif":
-            print("image/gif")
-        elif file[1] == "jpg":
-            print("image/jpg")
-        elif file[1] == "jpeg":
-            print("image/jpeg")
-        elif file[1] == "png":
-            print("image/png")
-        elif file[1] == "pdf":
-            print("application/pdf")
-        elif file[1] == "txt":
-            print("text/plain")
-        elif file[1] == "zip":
-            print("application/zip")
-        else:
-            print("application/octet-stream")
-    
+def tell_extension(extension):
+    if extension == "gif":
+        return "image/gif"
 
-main()
+    if extension == "jpg" or extension == "jpeg":
+        return("image/jpeg")
+
+    elif file[-1] == "png":
+        return("image/png")
+    elif file[-1] == "pdf":
+        return("application/pdf")
+    elif file[-1] == "txt":
+        return("text/plain")
+    elif file[-1] == "zip":
+        return("application/zip")
+    else:
+        return("application/octet-stream")
+
+
+if __name__ == "__main__":
+    main()
