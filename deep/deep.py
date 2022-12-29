@@ -14,3 +14,4 @@ def check(user_answer: str) -> bool:
 
 if __name__ == "__main__":
     main()
+
