@@ -19,17 +19,25 @@ def is_valid(s):
     if not first_letters.isalpha():
         return False
 
-    number = ""
-    for letter in s:
-        
-        if letter.isdigit():
-            index = s.find(letter)
-            number += s[index:]
-            break
-    print(number)
+    index = ""
 
-    # check if the plate ends with numbers and not start with zero
-    if number.find("0") == 0:
+    # check if the plate ends with numbers
+    for letter in s:
+
+        if letter.isdigit():
+            # first number in original string
+            index = s.find(letter)
+
+            # check if every char after first num is num
+            for char in s[index:]:
+                if not char.isdigit():
+                    # There is a letter after num
+                    return False
+
+            break
+
+    # check if first number in original string is not zero
+    if s.find("0") == index:
         return False
 
     # check if no special characters[., ' ', !]
