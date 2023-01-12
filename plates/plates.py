@@ -7,14 +7,13 @@ def main():
 
 
 def is_valid(s):
-    
     first_letters = s[0:2]
     special_characters = ['.', ' ', '!', '-', '_', '?']
 
     # check the length of the string
-    if len(s) not in range(2,7):
+    if len(s) not in range(2, 7):
         return False
-    
+
     # check the plate has at least first two letters
     if not first_letters.isalpha():
         return False
@@ -46,8 +45,6 @@ def is_valid(s):
             return False
 
     return True
-
-
 
 
 main()

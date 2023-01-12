@@ -1,19 +1,21 @@
 def main():
-  coke_price = 50
-  cents = [25, 10, 5]
+    coke_price = 50
+    accepted_coins = [25, 10, 5]
 
-  while coke_price > 0:
-    user_cent = int(input("Insert Coin: "))
+    while True:
+        if coke_price <= 0:
+            break
 
-    for cent in cents:
+        print(f"Amount Due: {coke_price}")
+        coin = int(input("Insert Coin: "))
 
-      if cent == user_cent:
-        coke_price -= cent
-        if coke_price > 0:
-          print(f"Amount Due: {coke_price}")
+        # Check if inserted coin is accepted by the machine
+        if coin in accepted_coins:
+            coke_price -= coin
 
-  print(f"Change Owed: {abs(coke_price)}")
+    print(f"Change Owed: {abs(coke_price)}")
 
 
 if __name__ == "__main__":
-  main()           
+    main()
+
