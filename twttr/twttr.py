@@ -10,7 +10,7 @@ def omit_vowel(msg: str) -> str:
 
   for letter in msg:
 
-    if letter in vowels:
+    if letter.lower() in vowels:
       letter = ""
 
     new_msg += letter

@@ -10,7 +10,7 @@ def is_valid(s):
     
     first_letters = s[0:2]
     special_characters = ['.', ' ', '!', '-', '_', '?']
-    print(first_letters)
+
     # check the length of the string
     if len(s) not in range(2,7):
         return False
@@ -27,7 +27,7 @@ def is_valid(s):
         if letter.isdigit():
             # first number in original string
             index = s.find(letter)
-
+            print(index)
             # check if every char after first num is num
             for char in s[index:]:
                 if not char.isdigit():
