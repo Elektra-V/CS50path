@@ -1,38 +1,40 @@
 def main():
-    x = fuel_check()
-    print(x)
-
-    
-def fuel_check() -> float:
     while True:
-
-        fraction_fuel = input("Fraction: ")
-        part_1, part_2 = fraction_fuel.split("/")
-        num, denom = int(part_1), int(part_2)
-       
+        num, denom = input("Fraction: ").split("/")
         try:
-            percentage = num / denom * 100
-
-            if num < denom:
-                
-                if percentage >= 99:
-                    return "F"
-                if percentage <= 1:
-                    return "E"
-            else: 
-                raise e
-            
+            x = fuel_check(int(num), int(denom))
         except ValueError:
-            pass
+            continue
 
-        except ZeroDivisionError:
-            pass
+        print(x)
 
-        except Exception as e:
-            pass
 
+def fuel_check(num: int, denom: int) -> float:
+    try:
+        percentage = num / denom * 100
+
+        if num < denom:
+
+            if percentage >= 99:
+                return "F"
+
+            if percentage <= 1:
+                return "E"
         else:
-            return percentage
+            raise e
+
+    except ValueError:
+        pass
+
+    except ZeroDivisionError:
+        pass
+
+    except Exception as e:
+        pass
+
+    else:
+        return percentage
 
 
 main()
+

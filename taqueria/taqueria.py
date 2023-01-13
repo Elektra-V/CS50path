@@ -1,9 +1,5 @@
-#prompting them item per line 
+# prompting them item per line
 def main():
-    total_bill()
-    
-
-def total_bill():
     menu = {
         "Baja Taco": 4.00,
         "Burrito": 7.50,
@@ -15,24 +11,35 @@ def total_bill():
         "Taco": 3.00,
         "Tortilla Salad": 8.00
     }
+
+    total_bill(menu)
+
+
+def total_bill(menu: dict):
     total_bill = 0
+
     while True:
         try:
             # take order from the user
-            # convert each input into lowercase
+            # convert each input into titlecase
             order_item = input("Item: ").title()
             # check if order is in items
             if order_item in menu.keys():
-            # add the cost of the item to total bill
+                # add the cost of the item to total bill
                 total_bill += menu[order_item]
-            # format the total bill output
-            print(f"Total Bill: ${total_bill:.2f}")
-        #catch when control-d is pressed
+
+                # format the total bill output
+                print(f"Total Bill: ${total_bill:.2f}")
+
+        # catch when control-d is pressed
         except EOFError:
+            print("\n")
             break
+
         # catch if the item is not there
         except KeyError:
             pass
 
 
 main()
+
